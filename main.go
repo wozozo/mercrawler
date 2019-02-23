@@ -41,7 +41,7 @@ func Scrape(keyword string) []MercariItem {
 		log.Fatal(err)
 	}
 
-	mercariItems := make([]MercariItem, 0)
+	var mercariItems []MercariItem
 
 	doc.Find(".items-box-content .items-box").Each(func(i int, s *goquery.Selection) {
 		itemName := s.Find(".items-box-name").Text()
