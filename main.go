@@ -80,9 +80,7 @@ func Notify(notifyArgs NotifyArgs) {
 }
 
 func main() {
-	var (
-		keyword = flag.String("keyword", "", "Search item keyword")
-	)
+	keyword := flag.String("keyword", "", "Search item keyword")
 	flag.Parse()
 	items := Scrape(*keyword)
 
